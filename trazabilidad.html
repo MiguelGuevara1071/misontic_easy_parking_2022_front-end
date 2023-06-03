@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/styles.css">
+    <title>Trazabilidad</title>
+</head>
+<body>
+    <!-- barra de navegacion -->
+    <nav class="navbar navbar-expand-lg" style="background-color: #0a4275;">
+      <div class="container-fluid">
+        <a class="navbar-brand text-white" href="./index.html">Easy parnking</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                   
+            <li class="nav-item">
+              <a class="nav-link text-white" aria-current="page" href="./plazas.html">Plazas</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" aria-current="page" href="./facturacion.html">Facturación</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" aria-current="page" href="./detalles.html">Detalles</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active text-white" aria-current="page" href="./trazabilidad.html">Trazabilidad</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active text-white" aria-current="page" href="./index.html">Inicio</a>
+            </li>
+          </ul>
+          <li class="nav-item" style="list-style:none;">
+            <img class="img-thumbnail" src="./Imagenes/iconoPagina.png" alt="..." width="50" height="50">
+          </li>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Titulo principal -->
+    <header>
+      <div class="container">
+        <br>
+        <h2 class="text-center shadow p-3 mb-5 bg-white rounded">Trazabilidad del parqueadero</h2>
+      </div>
+      
+    </header>
+    <!-- Acordeones  -->
+    <main>
+      <div class="container border shadow p-3 mb-5 bg-white rounded">
+        <h4 class="text-center" style="margin-top: 1rem;">Registro de ingreso de vehiculos y ingresos pasivos</h4>
+        <hr>
+        
+        <div class="accordion accordion-flush" id="accordionFlushExample">
+            <!-- Acordeon que contiene el registro de vehiculos -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingOne"> 
+                <button class="accordion-button collapsed bg-success text-white" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                  Seleccione para visualizar regisro de ingresos de los vehiculos en el parqueadero
+                </button>
+              </h2>
+              
+              <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body"><hr>
+                    <div class="row">
+                        <div class="col-sm-4">
+                          <div class="card">
+                            <div class="card-body" id="ingreso-vehiculos-dia">
+                              <h5 class="card-title">Total flujo de vehiculos dia</h5>
+                              <hr>
+                              <p class="card-text">El total de ingreso de vehiculos durante el dia fue de:</p>
+                              <a href="#" class="btn btn-primary">45</a>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="col-sm-4">
+                          <div class="card">
+                            <div class="card-body" id="ingreso-vehiculos-semana">
+                              <h5 class="card-title">Total flujo de vehiculos semana</h5>
+                              <hr>
+                              <p class="card-text">El total de ingreso de vehiculos durante la semana fue de:</p>
+                              <a href="#" class="btn btn-dark text-white">150</a>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="card">
+                              <div class="card-body" id="ingreso-vehiculos-mes">
+                                <h5 class="card-title">Total flujo de vehiculos mes</h5>
+                                <hr>
+                                <p class="card-text">El total de ingreso de vehiculos durante el mes fue de:</p>
+                                <a href="#" class="btn btn-success">360</a>
+                              </div>
+                            </div>
+                          </div>
+                      </div>
+                      
+                    </div>    
+              </div>
+            </div>
+
+            <!-- Acordeon que contiene el registro de vehiculos -->
+            <h4 class="text-center" style="margin-top: 1rem;">Ingresos pasivos del parqueadero</h4>
+            <hr>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingTwo">
+                <button class="accordion-button collapsed bg-success text-white" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                  Seleccione para visualizar ingresos pasivos del parqueadero
+                </button>
+              </h2>
+              <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                    <hr>
+                    <div class="row">
+                        <div class="col-sm-4">
+                          <div class="card">
+                            <div class="card-body" id="ingreso-efectivo-dia">
+                              <h5 class="card-title">Total de ingresos dia</h5>
+                              <hr>
+                              <p class="card-text">El total de ingresos obtenidos durante el dia por el parqueadero fueron de:</p>
+                              <a href="#" class="btn btn-primary">$ 450.0000</a>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="col-sm-4">
+                          <div class="card">
+                            <div class="card-body" id="ingreso-efectivo-semana">
+                              <h5 class="card-title">Total de ingresos semana</h5>
+                              <hr>
+                              <p class="card-text">El total de ingresos obtenidos durante la semana por el parqueadero fueron de:</p>
+                              <a href="#" class="btn btn-dark text-white">$ 5.400.000</a>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="card">
+                              <div class="card-body" id="ingreso-efectivo-mes">
+                                <h5 class="card-title">Total de ingresos mes</h5>
+                                <hr>
+                                <p class="card-text">El total de ingresos obtenidos durante el mes por el parqueadero fueron de:</p>
+                                <a href="#" class="btn btn-success">$ 15.015.000</a>
+                              </div>
+                            </div>
+                          </div>
+                      </div>
+                    </div>
+              </div>
+            </div>
+        
+      </div>
+    </main>
+    
+    <br>
+    <section class="footer">
+      <!-- Footer -->
+      <footer class="text-center text-white" style="background-color: #0a4275;">
+        <div class="container p-4 pb-0">
+          <section class="">
+            <p class="d-flex justify-content-center align-items-center">
+              <span class="me-3">Desarrollado por el Grupo Numero 7</span>
+              <span class="me-3">Miguel, Tatiana y Oscar</span>
+            </p>
+          </section>
+        </div>
+      
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+          © Año 2022:
+          <a class="text-white" href="https://lms.uis.edu.co/mintic2022/">Programa Mision Tic Universidad Industrial de Santander</a>
+        </div>
+      </footer>
+    </section>
+      
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+      <script src="js/request.js"></script>
+      <script src="js/trazabilidad.js"></script>
+      <script>
+          window.onload = function(){
+            loadRegistroVehiculos();  
+            loadRegistroIngresos();
+          }
+      </script>
+  </body>
+</html>

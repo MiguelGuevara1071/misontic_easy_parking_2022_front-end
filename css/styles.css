@@ -1,0 +1,54 @@
+.navbar-brand:hover, .nav-link:hover, .boton_ir:hover {
+    background-color: #198754;
+} 
+
+label {
+    font-weight: bold;
+} 
+
+input {
+    border: 5px bold !important;
+    border-radius: 8px;
+} 
+
+.card-title {
+    text-align: center;
+} 
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+.AgregarPlaza{
+    font-weight: bold;
+}
+
+.AgregarPlaza:hover{
+    background-color: #0a4275;
+}
+
+.active:active{
+    background-color: #198754;
+}
+
+.accordion-button, .nav-link{
+    font-weight: bold;
+}
+
+.nav-link{
+    font-size: 1rem;
+}
+
+.navbar-brand{
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.btn:hover, a:hover{
+    color: white;
+}
+
+.footer{
+    font-weight: bold;
+}

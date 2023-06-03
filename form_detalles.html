@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/styles.css">
+    <title>Formulario plazas</title>
+</head>
+<body>
+    <!-- barra de navegacion -->
+    <nav class="navbar navbar-expand-lg" style="background-color: #0a4275;">
+        <div class="container-fluid">
+          <a class="navbar-brand text-white" href="./index.html">Easy parnking</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active text-white" aria-current="page" href="./plazas.html">Plazas</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active text-white" aria-current="page" href="./facturacion.html">Facturación</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" aria-current="page" href="./detalles.html">Detalles</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active text-white" aria-current="page" href="./trazabilidad.html">Trazabilidad</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active text-white" aria-current="page" href="./index.html">Inicio</a>
+              </li> 
+            </ul>
+            <li class="nav-item" style="list-style:none;">
+              <img class="img-thumbnail" src="./Imagenes/iconoPagina.png" alt="..." width="50" height="50">
+            </li>
+          </div>
+        </div>
+      </nav>
+    <br>
+    <!-- Formulario de creacion de plazas -->
+    <div class="container border shadow p-3 mb-5 bg-white rounded">
+        <h4 class="text-center" style="margin-top: 1rem;">Administrar detalle facturas</h4>
+        <hr>
+        <form class="row g-3" style="margin: 2rem 2rem;" action="" onsubmit="" method="POST">
+          
+          <div class="col-md-6">
+            <label for="id_detalle" class="form-label">Id detalle</label>
+            <input type="text" class="form-control" id="id_detalle" placeholder="Ingrese el id del detalle" disabled>
+          </div>
+
+          <div class="col-md-6">
+            <label for="id_plaza" class="form-label">Id de la plaza</label>
+            <input type="text" class="form-control" id="id_plaza" placeholder="Ingrese id de la plaza">
+          </div>
+
+          <div class="col-md-6">
+            <label for="id_factura" class="form-label">Id de la factura</label>
+            <input type="text" class="form-control" id="id_factura" placeholder="Ingrese id de la factura">
+          </div>
+
+          <!-- <div class="col-md-6">
+            <label for="inputState" class="form-label">Plaza asignada al vehiculo</label>
+            <select id="inputState" class="form-select">
+              <option selected>Seleccione la plaza</option>
+              <option value="041">041</option>
+              <option value="042">042</option>
+              <option value="043">043</option>
+            </select>
+          </div> -->
+          
+          <div class="col-md-6">
+            <label for="valor_pago" class="form-label">Valor a cancelar</label>
+            <input type="text" class="form-control" id="valor_pago" placeholder="Ingrese el valor del pago">
+          </div>
+        
+          <div class="col-12">
+            <button type="button" class="btn btn-primary" onclick="saveDetalle()">Guardar</button> 
+            <button type="button" class="btn btn-success"><a href="./detalles.html">Regresar</a></button>           
+            <button type="reset" class="btn btn-danger">Cancelar</button>
+          </div>
+        </form>
+        
+      </div>
+      <section class="footer">
+        <!-- Footer -->
+        <footer class="text-center text-white" style="background-color: #0a4275;">
+          <div class="container p-4 pb-0">
+            <section class="">
+              <p class="d-flex justify-content-center align-items-center">
+                <span class="me-3">Desarrollado por el Grupo Numero 7</span>
+                <span class="me-3">Miguel, Tatiana y Oscar</span>
+              </p>
+            </section>
+          </div>
+        
+          <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+            © Año 2022:
+            <a class="text-white" href="https://lms.uis.edu.co/mintic2022/">Programa Mision Tic Universidad Industrial de Santander</a>
+          </div>
+        </footer>
+      </section>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+      <script src="js/request.js"></script>
+      <script src="js/detalle.js"></script>
+      <script>
+        window.onload = function(){
+            const urlParams = new URLSearchParams(window.location.search);
+            if (urlParams.get('id') != null)
+                loadDetalles(urlParams.get('id'))
+        }
+    </script>
+  </body>
+</html>
